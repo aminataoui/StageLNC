@@ -1,0 +1,104 @@
+//Rapport test tablette
+
+Logiciel: JPen2Saisie:
+
+
+Pour toutes les tablettes:
+
+Détecte le bon système d’exploitation.
+
+—> Sous Windows 7 (PC):
+Tablette non détecté comme connectée.
+—> Sous Mac OS X:
+Tablette détectée comme connectée. (pour la Intuos pro)
+
+Coeff Z toujours à 0,01953 pourquoi?
+
+Revoir les raccourcis:
+Echap: n’arrête pas la saisie. OK
+Supp: ne supprime pas la saisie. OK
+La gomme n’efface pas la saisie. 
+Impossible de colorer les lever avec l’option des couleurs. 
+
+/!\ Il faudrait donc revoir les fonctionnalités des différents boutons car pour l’instant ils ne sont pas tous opérationnels 
+
++ Modifier le bouton arrêt de manière à ce que, lorsqu’on arrête la saisie, un enregistrement automatique ait lieu. OK
+
+La fonction File > Open ne permet pas d’ouvrir un fichier et fait planter le logiciel: différence entre ouvrir un fichier et le sélectionner dans le select? 
+
+Z non paramétrable à l’ouverture sur windows alors que sur Mac on peut choisir si on souhaite prendre en considération un Z (vert) ou non (rouge).
+
+Tablette: Intuos Pro L (PTH 851)
+
+Driver version: 6.3.33-5 (disponible sur le site Wacom)
+
+La notice indique: Compatible uniquement avec Windows 8, 7, Vista SP2 et Mac OS X à partir de la version 10.6.8 -> verifier si le pilote fonctionne sous Windows 10 (normalement oui étant donné que Jean-Luc utilise Windows 10).
+
+Le logiciel indique 311mm de largeur, 216 mm hauteur. 
+Or sur internet:
+Surface active du stylet= 325mm de largeur et 203mm de longueur.
+Surface tactile active: 299mm de largeur et 190mm de longueur.
+Tablette: 487mm de largeur et 318 de longueur.
+
+Anomalies détectés:
+
+Trais épais qui apparait au début de la saisie et puis garde en mémoire le point précédent. 
+
+Le X et le Y correspondant au 0 sur la tablette ne correspondent pas au point dans le coin supérieur gauche ( qlq mm de décalage): voir si cela est normal.
+
+Problème de différenciation des levers/traces: Sur le logiciel d’analyse les levers sont bien différenciés des traces sur la suite ( donc juste mauvaise visualisation sur le logiciel de saisie).
+
+Ne détecte pas le Z alors que dans l’onglet valeurs courantes, un Z est détecté et cette tablette possède un Z. 
+
+
+Tablette: Intuos 4 L (PTK 840)
+
+Non détecté comme périphérique sur Mac et sur PC. 
+Problème de tablette? Car pilote OK.
+
+Dimension de la surface active: 325mm de largeur et 203 de longueur compatible avec le logiciel. 
+
+Coté droit de la tablette qui ne fonctionne pas , brancher sur l’embout de gauche.
+
+Tablette: Intuos 2 A5
+
+Driver version: 6.1.5-3 (disponible sur le site Wacom)
+
+Pas de trait en début de saisie. 
+Mais même pb que pour les autres tablettes garde en mémoire le dernier point de la saisie précédente (avant arrêt).
+Qlq fois lever non distingué des traces.
+Indique valeurs Z true. Détecte qlq fois un Z.
+
+Tablette: Intuos 3 A5 (PTZ 630)
+
+Driver version: 6.1.5-3 (disponible sur le site Wacom)
+
+Active Area (W x D): 203.2 x 152.4mm (8.0 x 6.0in) compatible avec le logiciel.
+Au lancement prend les coordonnées 0,0 et puis gros trait qui relie les points. 
+Trais qui apparait et qui garde en mémoire le dernier point. ( chose qui n’apparaissait pas dans la version précédente).
+
+Ajouter Cintiq 22HD : 479 x 271mm
+
+Logiciel: EcritureSuite4D:
+
+
+Observations supplémentaires:
+
+Résultats similaire sur PC et sur Mac. 
+
+Pour l'ensemble des fenêtres, on devrait ajouter une barre permettant de dérouler la fenêtre (scroll bar) afin de faciliter la visualisation des résultats. 
+
+(Segmente Trace)
+Segmentation: bouton « ? » En chantier désolé: correspond à la doc?
+La 2nd gomme (effacer la sélection ne fonctionne pas).
+
+(Stat)
+Dans Statistiques> Caractéristiques de tracés: Fluidité Ratio données remplacé par un symbole contenant un « ? »… Qu’es ce que cela signifie?
+Voir avec Jean Claude la signification du moy gris -> moyenne de plusieurs tracés?
+Ajouter fonction pour le Text Field car vide. (seulement info…).
+Ajouter données de pression: variable de pression max.
+Coeff de correction de la pression pour l’affichage de la trace.
+Temps
+
+
+final JFrame frame;
